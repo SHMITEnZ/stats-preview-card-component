@@ -68,9 +68,14 @@ ul{
 /* hero */
 .card__hero{
     width: 100%;
-    background-color: var(--soft_violet-);
-    z-index:2;
+    border-radius: 1rem 1rem 0 0;
 }
+
+/*.hero__overlay{
+    max-width: 100%;
+    background: var(--soft_violet-);
+
+}*/
 
 .hero__img{
     max-width:100%;
@@ -99,12 +104,13 @@ ul{
 }
 
 .content__text{
+    color: var(--main_trasp_white-);
     line-height: 1.5;
     margin-bottom: 3rem;
 }
 
 .data__number{
-    color: var(--main_trasp_white-);
+    color: var(--white-);
     font-size: 2.4rem;
     padding-bottom: 0.5rem;
 
@@ -122,4 +128,50 @@ ul{
 footer{
     display: none;
 }
+
+/* ---------------------- media queries -------------------------------- */
+
+@media (min-width: 1000px){
+
+    body {
+        text-align: left;
+        
+    }
+
+    .card {
+        max-width: 80%;
+        flex-direction: row-reverse;
+        justify-content:space-between;
+    }
+
+    /* ---> allinamento quando ingrandisci è sbagliato!!!!!!!*/
+
+    .card__hero{
+        max-width: 40%;
+        background-color: aliceblue;
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    .hero__img{
+        max-width: 100%;
+        display: block;
+        border-radius: 0 1rem 1rem 0;
+    }
+ 
+    .card__content{
+        padding: 0 7rem 0 5rem;
+    }
+
+   .content__data {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+
+   .data__description{
+    padding:0;
+   }
+}
+
 
